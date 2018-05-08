@@ -22,11 +22,38 @@
 @import Foundation;
 
 @implementation ibgx
-@synthesize shouldContinueRunningRequestsInBackground = _shouldContinueRunningRequestsInBackground ;
-  
+
+@synthesize shouldContinueRunningRequestsInBackground ;
+
 // Export a native module
 // https://facebook.github.io/react-native/docs/native-modules-ios.html
 RCT_EXPORT_MODULE();
+
+- (nonnull NSURLRequest *)GET:(nonnull NSURL *)url
+                   parameters:(nullable NSDictionary *)parameters
+            completionHandler:(nonnull void (^)(id _Nullable response, NSError * _Nullable error))completionHandler{NSLog(@"Something To Print"); return(@"helloworld");};
+
+- (nonnull NSURLRequest *)POST:(nonnull NSURL *)url
+                   parameters:(nullable NSDictionary *)parameters
+            completionHandler:(nonnull void (^)(id _Nullable response, NSError * _Nullable error))completionHandler{NSLog(@"Something To Print"); return(@"helloworld");};
+
+- (nonnull NSURLRequest *)DELETE:(nonnull NSURL *)url
+                   parameters:(nullable NSDictionary *)parameters
+            completionHandler:(nonnull void (^)(id _Nullable response, NSError * _Nullable error))completionHandler{NSLog(@"Something To Print"); return(@"helloworld");};
+
+- (nonnull NSURLRequest *)PATCH:(nonnull NSURL *)url
+                   parameters:(nullable NSDictionary *)parameters
+            completionHandler:(nonnull void (^)(id _Nullable response, NSError * _Nullable error))completionHandler{NSLog(@"Something To Print"); return(@"helloworld");};
+
+- (nonnull NSURLRequest *)PUT:(nonnull NSURL *)url
+                   parameters:(nullable NSDictionary *)parameters
+            completionHandler:(nonnull void (^)(id _Nullable response, NSError * _Nullable error))completionHandler{NSLog(@"Something To Print"); return(@"helloworld");};
+
+- (nonnull NSURLRequest *)HEAD:(nonnull NSURL *)url
+                   parameters:(nullable NSDictionary *)parameters
+            completionHandler:(nonnull void (^)(id _Nullable response, NSError * _Nullable error))completionHandler{NSLog(@"Something To Print"); return(@"helloworld");
+
+};
 
 // Export constants
 // https://facebook.github.io/react-native/releases/next/docs/native-modules-ios.html#exporting-constants
