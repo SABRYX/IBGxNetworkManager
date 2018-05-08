@@ -1,7 +1,7 @@
 //  Created by react-native-create-bridge
 
 #import "ibgx.h"
-#import "/Users/hassan/Desktop/sabry/libraries/IBGxNetworkManager-3.framework/Headers/IBGxNetworkManager.h"
+
 // import RCTBridge
 #if __has_include(<React/RCTBridge.h>)
 #import <React/RCTBridge.h>
@@ -19,10 +19,11 @@
 #else
 #import “React/RCTEventDispatcher.h” // Required when used as a Pod in a Swift project
 #endif
+@import Foundation;
 
 @implementation ibgx
-@synthesize bridge = _bridge;
-
+@synthesize shouldContinueRunningRequestsInBackground = _shouldContinueRunningRequestsInBackground ;
+  
 // Export a native module
 // https://facebook.github.io/react-native/docs/native-modules-ios.html
 RCT_EXPORT_MODULE();
@@ -35,6 +36,7 @@ RCT_EXPORT_MODULE();
            @"EXAMPLE": @"example"
          };
 }
+
 
 // Export methods to a native module
 // https://facebook.github.io/react-native/docs/native-modules-ios.html

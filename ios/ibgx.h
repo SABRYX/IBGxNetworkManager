@@ -18,6 +18,46 @@
 #import “React/RCTEventEmitter.h” // Required when used as a Pod in a Swift project
 #endif
 
+
+@import Foundation;
+
 @interface ibgx : RCTEventEmitter <RCTBridgeModule>
-  // Define class properties here with @property
+
+
+
+@property (nonatomic, assign) BOOL shouldContinueRunningRequestsInBackground;
+//
++ (nonnull instancetype)sharedInstance;
+//
+- (nonnull NSURLRequest *)GET:(nonnull NSURL *)url
+                   parameters:(nullable NSDictionary *)parameters
+            completionHandler:(nonnull void (^)(id _Nullable response, NSError * _Nullable error))completionHandler;
+
+//
+- (nonnull NSURLRequest *)POST:(nonnull NSURL *)url
+                    parameters:(nullable NSDictionary *)parameters
+             completionHandler:(nonnull void (^)(id _Nullable response, NSError * _Nullable error))completionHandler;
+
+//
+- (nonnull NSURLRequest *)DELETE:(nonnull NSURL *)url
+                      parameters:(nullable NSDictionary *)parameters
+               completionHandler:(nonnull void (^)(id _Nullable response, NSError * _Nullable error))completionHandler;
+
+//
+- (nonnull NSURLRequest *)PATCH:(nonnull NSURL *)url
+                     parameters:(nullable NSDictionary *)parameters
+              completionHandler:(nonnull void (^)(id _Nullable response, NSError * _Nullable error))completionHandler;
+//
+- (nonnull NSURLRequest *)PUT:(nonnull NSURL *)url
+                   parameters:(nullable NSDictionary *)parameters
+            completionHandler:(nonnull void (^)(id _Nullable response, NSError * _Nullable error))completionHandler;
+
+//
+- (nonnull NSURLRequest *)HEAD:(nonnull NSURL *)url
+                    parameters:(nullable NSDictionary *)parameters
+             completionHandler:(nonnull void (^)(id _Nullable response, NSError * _Nullable error))completionHandler;
+//
+- (void)downloadImageDataAtURL:(nonnull NSURL *)url
+             completionHandler:(nonnull void (^)(NSData * _Nullable data, NSError * _Nullable error))completionHandler;
 @end
+
