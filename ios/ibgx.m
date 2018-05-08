@@ -10,7 +10,7 @@
 #else
 #import “React/RCTBridge.h” // Required when used as a Pod in a Swift project
 #endif
-
+//starting besm allah
 // import RCTEventDispatcher
 #if __has_include(<React/RCTEventDispatcher.h>)
 #import <React/RCTEventDispatcher.h>
